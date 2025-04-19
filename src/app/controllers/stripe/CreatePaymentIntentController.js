@@ -46,8 +46,8 @@ class CreatePaymentIntentController {
 
       const isProduction = process.env.NODE_ENV === 'production';
       const dpmCheckerLink = isProduction
-        ? `https://dashboard.stripe.com/payments/${paymentIntent.id}`
-        : `https://dashboard.stripe.com/test/payments/${paymentIntent.id}`;
+        // ? `https://dashboard.stripe.com/payments/${paymentIntent.id}`
+        // : `https://dashboard.stripe.com/test/payments/${paymentIntent.id}`;
 
       return res.status(201).json({
         clientSecret: paymentIntent.client_secret,
